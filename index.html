@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+
+<title>Return And Go Without Wires - FOSDEM 2025</title>
+
+<meta name="description" content="Return And Go Without Wires - FOSDEM 2025">
+<meta name="author" content="Ron Evans">
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel="stylesheet" href="css/reveal.css">
+<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+<!-- For syntax highlighting -->
+<link rel="stylesheet" href="lib/css/tomorrow.css">
+
+<link rel="stylesheet" href="css/hybrid.css">
+
+<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+<script>
+	document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+</script>
+
+<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body>
+	<div class="reveal">
+
+	<!-- Any section element inside of this container is displayed as a slide -->
+	<div class="slides">
+		<section>
+			<section>
+				<h1>Seeing Eye To Eye</h1>
+				<h1>Computer Vision Using WebAssembly</h1>
+				<h2>FOSDEM 2025</h2>
+				<h2>Ron Evans - @deadprogram</h2>
+			</section>
+		</section>
+
+		<section>
+			<h2>So how about computer vision using WebAssembly?</h2>
+		</section>
+
+		<section>
+			<h2>A lot of computer vision applications have the same basic structure</h2>
+		</section>
+
+		<section>
+			<h2>But lots of moving parts to integrate</h2>
+		</section>
+
+		<section>
+			<h2>And hard to install on many different machines</h2>
+		</section>
+
+		<section>
+			<h2>Until now...</h2>
+		</section>
+
+		<section>
+			<div class="image-container">
+				<img src="images/wasmvision-logo.png">
+			</div>
+			<h2>wasmvision.com</h2>
+		</section>
+
+		<section>
+			<h2>Get going with computer vision</h2>
+		</section>
+
+		<section>
+			<h2>Capture video</h2>
+		</section>
+
+		<section>
+			<h2>Process it</h2>
+		</section>
+
+		<section>
+			<h2>Save or stream it</h2>
+		</section>
+
+		<section>
+			<div class="image-container">
+				<img src="images/wasmvision-arch.png">
+			</div>
+			<h2>wasmvision architecture</h2>
+		</section>
+
+		<section>
+			<h2>wasmVision engine</h2>
+		</section>
+
+		<section>
+			<h2>Written in Go</h2>
+		</section>
+
+		<section>
+			<h2>(uses CGo)</h2>
+		</section>
+
+		<section>
+			<h2>Single, statically linked binary</h2>
+		</section>
+
+		<section>
+			<h2>OpenCV</h2>
+		</section>
+
+		<section>
+			<h2>FFmpeg</h2>
+		</section>
+
+		<section>
+			<h2>GStreamer</h2>
+		</section>
+
+		<section>
+			<h2>GoCV</h2>
+		</section>
+
+		<section>
+			<h2>Wazero</h2>
+			<h3>wazero.com</h3>
+		</section>
+
+		<section>
+			<h2>wasmvision Processors</h2>
+		</section>
+
+		<section>
+			<h2>Can be written using Go (TinyGo)</h2>
+		</section>
+
+		<section>
+			<h2>Rust</h2>
+		</section>
+
+		<section>
+			<h2>C</h2>
+		</section>
+
+		<section>
+			<h2>wasmCV</h2>
+			<h3>wasmcv.org</h3>
+		</section>
+
+		<section>
+			<h2>wasm interfaces for computer vision</h2>
+		</section>
+
+		<section>
+			<h2>Using wit (wasm interface type)</h2>
+		</section>
+
+		<section>
+			<h2>Part of the wasm component model</h2>
+		</section>
+
+		<section>
+			<h2>Processors for things like</h2>
+		</section>
+
+		<section>
+			<h2>Blurring images</h2>
+		</section>
+
+		<section>
+			<h2>Detecting faces</h2>
+		</section>
+
+		<section>
+			<h2>Detecting and blurring faces</h2>
+		</section>
+
+		<section>
+			<h2>Blur code example (Go)</h2>
+			<h3><a target="_blank" href="https://github.com/wasmvision/wasmvision/blob/main/processors/blur/blur.go">See the code</a></h3>
+		</section>
+
+		<section>
+			<h2>Demo blur</h2>
+		</section>
+
+		<section>
+			<h2>Blur code example (Rust)</h2>
+			<h3><a target="_blank" href="https://github.com/wasmvision/wasmvision/blob/main/processors/blurrs/src/lib.rs">See the code</a></h3>
+		</section>
+
+		<section>
+			<h2>Blur code example (C)</h2>
+			<h3><a target="_blank" href="https://github.com/wasmvision/wasmvision/blob/main/processors/blurc/process.c">See the code</a></h3>
+		</section>
+
+		<section>
+			<h2>A quick tour of a few processors</h2>
+		</section>
+
+		<section>
+			<h2>asciify</h2>
+		</section>
+
+		<section>
+			<h2>ollama + mosaic</h2>
+		</section>
+
+		<section>
+			<div class="image-container">
+				<img src="images/wasmvision-ollama.png">
+			</div>
+			<h2>ollama + mosaic</h2>
+		</section>
+
+		<section>
+			<h2>version 0.1 available now!</h2>
+		</section>
+
+		<section>
+			<h2>wasmvision.com</h2>
+			<h3>@wasmvision@mastodon.social</h3>
+			<h3>@wasmvision.com</h3>
+			<h3>@wasmvision</h3>
+		</section>
+
+		<section>
+			<h1>Thank you!</h1>
+			<h2>@deadprogram</h2>
+			<h2>Technologist For Hire</h2>
+		</section>	
+	  </div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.min.js"></script>
+	<script src="js/hybrid.js"></script>
+
+	<script>
+
+	  // Full list of configuration options available here:
+	  // https://github.com/hakimel/reveal.js#configuration
+	  Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+		// 16:9 aspect ratio
+		width: 1280,
+		height: 720,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+		transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+		// Parallax scrolling
+		// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+		// parallaxBackgroundSize: '2100px 900px',
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+		  { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+		  { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		  { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		  { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+		  { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+		  { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+		]
+	  });
+
+	</script>
+
+  </body>
+</html>
