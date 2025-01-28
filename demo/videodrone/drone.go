@@ -18,8 +18,8 @@ var (
 )
 
 func startDrone() {
-	conn, _ := net.DialUDP("udp", nil, &net.UDPAddr{IP: []byte{127, 0, 0, 1}, Port: 6789, Zone: ""})
-	defer conn.Close()
+	proxy, _ := net.DialUDP("udp", nil, &net.UDPAddr{IP: []byte{127, 0, 0, 1}, Port: 6789, Zone: ""})
+	defer proxy.Close()
 
 	drone.On(tello.FlightDataEvent, func(data interface{}) {
 		// TODO: protect flight data from race condition
@@ -38,10 +38,7 @@ func startDrone() {
 
 	drone.On(tello.VideoFrameEvent, func(data interface{}) {
 		pkt := data.([]byte)
-		conn.Write(pkt)
-		// if _, err := ffmpegIn.Write(pkt); err != nil {
-		// 	fmt.Println(err)
-		// }
+		proxy.Write(pkt)
 	})
 
 	robot = gobot.NewRobot("tello",
