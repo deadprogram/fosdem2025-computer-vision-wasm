@@ -24,6 +24,11 @@ blur:
 asciify:
 	wasmvision run -p asciify
 
-ollama:
-	wasmvision run -p ollama -p mosaic -logging=error
+mosaic:
+	wasmvision run -p mosaic
 
+ollama:
+	wasmvision run -p ollama -c model= -logging=error
+
+dronestream:
+	wasmvision run -p facedetectyn --capture ffmpeg --source udp://127.0.0.1:6789
