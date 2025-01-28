@@ -4,9 +4,9 @@
 <head>
 <meta charset="utf-8">
 
-<title>Return And Go Without Wires - FOSDEM 2025</title>
+<title>Seeing Eye To Eye - FOSDEM 2025</title>
 
-<meta name="description" content="Return And Go Without Wires - FOSDEM 2025">
+<meta name="description" content="Seeing Eye To Eye - FOSDEM 2025">
 <meta name="author" content="Ron Evans">
 
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -39,11 +39,49 @@
 	<div class="slides">
 		<section>
 			<section>
-				<h1>Seeing Eye To Eye</h1>
+				<h1>Seeing Eye To Eye:</h1>
 				<h1>Computer Vision Using WebAssembly</h1>
 				<h2>FOSDEM 2025</h2>
 				<h2>Ron Evans - @deadprogram</h2>
 			</section>
+		</section>
+
+		<section>
+			<h2>Ron Evans (@deadprogram)</h2>
+		</section>
+
+		<section>
+			<h1>Technologist For Hire</h1>
+		</section>
+	
+		<section>
+			<div class="image-container">
+				<img src="images/thg-logo.png">
+			</div>
+			<h3>hybridgroup.com</h3>
+		</section>
+
+		<section>
+			<h2>Software that makes</h2>
+			<h2>your hardware work</h2>
+		</section>
+		
+		<section>
+			<h2>Open Source Projects</h2>
+		</section>
+  
+		<section>
+			<div class="image-container">
+			  <img src="images/tinygo-logo.png">
+			</div>
+			<h3>tinygo.org</h3>          
+		</section>
+
+		<section>
+			<div class="image-container">
+			  <img src="images/gocvlogo.jpg">
+			</div>
+			<h3>GoCV.io</h3>          
 		</section>
 
 		<section>
@@ -167,6 +205,104 @@
 		</section>
 
 		<section>
+			<h2>HOWEVER</h2>
+		</section>
+
+		<section>
+			<h2>Not actually using the wasm component model</h2>
+		</section>
+
+		<section>
+			<h2>How Computer Vision Works</h2>
+		</section>
+
+		<section>
+			<div class="image-container">
+				<img src="images/mat-base.jpg">
+			</div>
+			<h2>Mat</h2>
+		</section>
+
+		<section>
+			<div class="image-container">
+				<img src="images/mat-2d3c.jpg">
+			</div>
+			<h2>RGB Mat</h2>
+		</section>
+
+		<section>
+			<div class="image-container">
+				<img src="images/how-gocv-works.png">
+			</div>
+			<h2>How OpenCV/GoCV Works</h2>
+		</section>
+
+		<section>
+			<h2>mat.wit file</h2>
+			<h3><a target="_blank" href="https://github.com/wasmvision/wasmcv/blob/main/wit/mat.wit">See the code</a></h3>
+		</section>
+
+		<section>
+			<h2>Everything is generated from the .wit files</h2>
+		</section>
+
+		<section>
+			<h2>wasmCV Docs</h2>
+			<h3><a target="_blank" href="https://wasmcv.org/docs/0.6.0/#a-idwasm_cv_mataimport-interface-wasmcvmat">See the code</a></h3>
+		</section>
+
+		<section>
+			<h2>Go client interface wrappers</h2>
+			<h2>wit-bindgen-go</h2>
+			<h3>go.bytecodealliance.org</h3>
+		</section>
+
+		<section>
+			<section>
+			<pre><code class="shell">
+go get wasmcv.org/wasm/cv
+			</code></pre>
+			</section>
+		</section>			
+
+		<section>
+			<h2>Blur processor (Go)</h2>
+			<h3><a target="_blank" href="https://github.com/wasmvision/wasmvision/blob/main/processors/blur/blur.go">See the code</a></h3>
+		</section>
+
+		<section>
+			<h2>Rust/C client interface wrappers</h2>
+			<h2>wit-bindgen</h2>
+			<h3>github.com/bytecodealliance/wit-bindgen</h3>
+		</section>
+
+		<section>
+			<section>
+			<pre><code class="shell">
+cargo add wasmcv
+			</code></pre>
+			</section>
+		</section>			
+
+		<section>
+			<h2>Blur processor (Rust)</h2>
+			<h3><a target="_blank" href="https://github.com/wasmvision/wasmvision/blob/main/processors/blurrs/src/lib.rs">See the code</a></h3>
+		</section>
+
+		<section>
+			<section>
+			<pre><code class="shell">
+cp /usr/local/include/wasmcv.h .
+			</code></pre>
+			</section>
+		</section>			
+
+		<section>
+			<h2>Blur processor (C)</h2>
+			<h3><a target="_blank" href="https://github.com/wasmvision/wasmvision/blob/main/processors/blurc/process.c">See the code</a></h3>
+		</section>
+
+		<section>
 			<h2>Processors for things like</h2>
 		</section>
 
@@ -183,22 +319,7 @@
 		</section>
 
 		<section>
-			<h2>Blur code example (Go)</h2>
-			<h3><a target="_blank" href="https://github.com/wasmvision/wasmvision/blob/main/processors/blur/blur.go">See the code</a></h3>
-		</section>
-
-		<section>
-			<h2>Demo blur</h2>
-		</section>
-
-		<section>
-			<h2>Blur code example (Rust)</h2>
-			<h3><a target="_blank" href="https://github.com/wasmvision/wasmvision/blob/main/processors/blurrs/src/lib.rs">See the code</a></h3>
-		</section>
-
-		<section>
-			<h2>Blur code example (C)</h2>
-			<h3><a target="_blank" href="https://github.com/wasmvision/wasmvision/blob/main/processors/blurc/process.c">See the code</a></h3>
+			<h2>'wasmvision' command</h2>
 		</section>
 
 		<section>
@@ -206,29 +327,89 @@
 		</section>
 
 		<section>
-			<h2>asciify</h2>
+			<h2>asciify processor (Go)</h2>
+			<h3><a target="_blank" href="https://github.com/wasmvision/wasmvision/blob/main/processors/asciify/asciify.go">See the code</a></h3>
 		</section>
 
 		<section>
-			<h2>ollama + mosaic</h2>
+			<h2>mosaic processor (Go)</h2>
+			<h3><a target="_blank" href="https://github.com/wasmvision/wasmvision/blob/main/processors/mosaic/mosaic.go">See the code</a></h3>
 		</section>
 
 		<section>
 			<div class="image-container">
 				<img src="images/wasmvision-ollama.png">
 			</div>
-			<h2>ollama + mosaic</h2>
+			<h2>ollama</h2>
 		</section>
 
+		<section>
+			<h2>ollama processor (Go)</h2>
+			<h3><a target="_blank" href="https://github.com/wasmvision/wasmvision/blob/main/processors/ollama/ollama.go">See the code</a></h3>
+		</section>
+
+		<!-- demo 0 -->
+		<section>
+			<section>
+				<h2>Videodrone</h2>
+			</section>
+
+			<section>
+				<h2>Flight control station with face tracking<br>
+					using machine learning model</h2>
+			</section>
+
+			<section>
+				<h2>DJI Tello drone</h2>
+			</section>
+
+			<section>
+				<h2>Dualshock 4 joystick</h2>
+			</section>
+
+			<section>
+				<div class="image-container">
+					<img src="images/gobot-logo.png">
+				</div>
+				<h2>Gobot</h2>
+			</section>
+
+			<section>
+				<h2>YuNet Face Detection Model</h2>
+			</section>
+
+			<section>
+				<div class="image-container">
+					<img src="images/how-dnn-facedetect-works.png">
+				</div>
+				<h2>How Computer Vision Models Work</h2>
+			</section>
+
+			<section>
+				<div class="image-container">
+					<img src="images/videodrone-arch.png">
+				</div>
+				<h2>Videodrone Architecture</h2>
+			</section>
+	
+			<section>
+				<h2>videodrone Code</h2>
+				<h3><a target="_blank" href="https://github.com/deadprogram/golab-2024/blob/main/demo/videodrone/main.go">See the code</a></h3>
+			</section>
+
+			<section>
+				<h2>videodrone flight</h2>
+			</section>
+		</section>
+		
 		<section>
 			<h2>version 0.1 available now!</h2>
 		</section>
 
 		<section>
 			<h2>wasmvision.com</h2>
-			<h3>@wasmvision@mastodon.social</h3>
-			<h3>@wasmvision.com</h3>
-			<h3>@wasmvision</h3>
+			<h3>fed: @wasmvision@mastodon.social</h3>
+			<h3>bsky: @wasmvision.com</h3>
 		</section>
 
 		<section>
