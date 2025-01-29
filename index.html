@@ -85,31 +85,63 @@
 		</section>
 
 		<section>
-			<h2>So what do you mean exactly computer vision using WebAssembly?</h2>
+			<h2>computer vision using WebAssembly?</h2>
 		</section>
 
 		<section>
-			<h2>Embedded Linux devices</h2>
+			<h2>Industrial computer vision</h2>
 		</section>
 
 		<section>
-			<h2>Edge computing devices</h2>
+			<section>
+				<h2>Embedded Linux devices</h2>
+			</section>
+
+			<section>
+				<h2>Edge computing devices</h2>
+			</section>
+
+			<section>
+				<h2>Cloud computing</h2>
+			</section>
 		</section>
 
 		<section>
-			<h2>Cloud computing</h2>
+			<section>
+				<h2>Agriculture</h2>
+			</section>
+			<section>
+				<h2>Transportation</h2>
+			</section>
+			<section>
+				<h2>Energy</h2>
+			</section>
+			<section>
+				<h2>Security</h2>
+			</section>
+			<section>
+				<h2>Manufacturing</h2>
+			</section>
 		</section>
 
 		<section>
-			<h2>A lot of computer vision applications have the same basic structure</h2>
+			<h2>A lot of computer vision applications have similar basic structure</h2>
 		</section>
 
 		<section>
-			<h2>But lots of moving parts to integrate</h2>
+			<h2>But lots of different parts to integrate</h2>
 		</section>
 
 		<section>
-			<h2>And hard to install on many different machines</h2>
+			<h2>hard to install on many different machines</h2>
+		</section>
+
+		<section>
+			<h2>hard to update</h2>
+		</section>
+
+		<section>
+			<h2>some need for limited customization</h2>
 		</section>
 
 		<section>
@@ -120,7 +152,7 @@
 		</section>
 
 		<section>
-			<h2>Get going with computer vision</h2>
+			<h2>Get going with computer vision using WebAssembly</h2>
 		</section>
 
 		<section>
@@ -143,7 +175,11 @@
 		</section>
 
 		<section>
-			<h2>wasmVision engine/cli</h2>
+			<h2>wasmVision engine</h2>
+		</section>
+
+		<section>
+			<h2>'wasmvision' command</h2>
 		</section>
 
 		<section>
@@ -152,10 +188,6 @@
 
 		<section>
 			<h2>(uses CGo)</h2>
-		</section>
-
-		<section>
-			<h2>Single, statically linked binary</h2>
 		</section>
 
 		<section>
@@ -191,6 +223,10 @@
 				<img src="images/wazero-logo.png">
 			</div>  
 			<h2>Wazero</h2>
+		</section>
+
+		<section>
+			<h2>All combined into a Single, statically linked binary</h2>
 		</section>
 
 		<section>
@@ -239,37 +275,61 @@
 		</section>
 
 		<section>
-			<h2>How Computer Vision Works</h2>
+			<section>
+				<h2>How Computer Vision Works</h2>
+			</section>
+
+			<section>
+				<div class="image-container">
+					<img src="images/mat-base.jpg">
+				</div>
+				<h2>Mat</h2>
+			</section>
+
+			<section>
+				<div class="image-container">
+					<img src="images/mat-2d3c.jpg">
+				</div>
+				<h2>RGB Mat</h2>
+			</section>
+
+			<section>
+				<div class="image-container">
+					<img src="images/how-gocv-works.png">
+				</div>
+				<h2>How OpenCV/GoCV Works</h2>
+			</section>
 		</section>
 
 		<section>
-			<div class="image-container">
-				<img src="images/mat-base.jpg">
-			</div>
-			<h2>Mat</h2>
-		</section>
+			<section>
+				<h2>How wit Works</h2>
+			</section>
 
-		<section>
-			<div class="image-container">
-				<img src="images/mat-2d3c.jpg">
-			</div>
-			<h2>RGB Mat</h2>
-		</section>
+			<section>
+				<h2>interfaces</h2>
+			</section>
 
-		<section>
-			<div class="image-container">
-				<img src="images/how-gocv-works.png">
-			</div>
-			<h2>How OpenCV/GoCV Works</h2>
-		</section>
+			<section>
+				<h2>basic types</h2>
+			</section>
 
-		<section>
-			<h2>world.wit file</h2>
-			<h3><a target="_blank" href="https://github.com/wasmvision/wasmcv/blob/main/wit/world.wit">See the code</a></h3>
-		</section>
+			<section>
+				<h2>record</h2>
+			</section>
 
-		<section>
-			<h2>Everything is generated from the .wit files</h2>
+			<section>
+				<h2>resource</h2>
+			</section>
+
+			<section>
+				<h2>world.wit file</h2>
+				<h3><a target="_blank" href="https://github.com/wasmvision/wasmcv/blob/main/wit/world.wit">See the code</a></h3>
+			</section>
+
+			<section>
+				<h2>Everything is generated from the .wit files</h2>
+			</section>
 		</section>
 
 		<section>
@@ -286,7 +346,7 @@
 		<section>
 			<section>
 			<pre><code class="shell">
-go get wasmcv.org/wasm/cv
+tinygo build -o blur.wasm -target=wasm-unknown ./blur
 			</code></pre>
 			</section>
 		</section>			
@@ -294,6 +354,10 @@ go get wasmcv.org/wasm/cv
 		<section>
 			<h2>Blur processor (Go)</h2>
 			<h3><a target="_blank" href="https://github.com/wasmvision/wasmvision/blob/main/processors/blur/blur.go">See the code</a></h3>
+		</section>
+
+		<section>
+			<h2>Run Blur processor (Go)</h2>
 		</section>
 
 		<section>
@@ -305,7 +369,7 @@ go get wasmcv.org/wasm/cv
 		<section>
 			<section>
 			<pre><code class="shell">
-cargo add wasmcv
+cargo build --target wasm32-unknown-unknown --release
 			</code></pre>
 			</section>
 		</section>			
@@ -316,9 +380,24 @@ cargo add wasmcv
 		</section>
 
 		<section>
+			<h2>Run Blur processor (Rust)</h2>
+		</section>
+
+		<section>
 			<section>
 			<pre><code class="shell">
-cp /usr/local/include/wasmcv.h .
+/opt/wasi-sdk/bin/clang --target=wasm32-unknown-unknown -O3 \
+        --sysroot="${WASI_LIBC_SYSROOT}/lib/wasi-libc/sysroot" \
+        -z stack-size=4096 -Wl,--initial-memory=65536 \
+        -I$WASMCV_C_COMPONENTS_PATH -I$WASMVISION_C_COMPONENTS_PATH \
+        -o ../blurc.wasm process.c \
+        $WASMCV_C_COMPONENTS_PATH/wasmcv/imports.c $WASMCV_C_COMPONENTS_PATH/wasmcv/imports_component_type.o \
+        $WASMVISION_C_COMPONENTS_PATH/wasmvision/platform.c $WASMVISION_C_COMPONENTS_PATH/wasmvision/platform_component_type.o \
+        -Wl,--export=process \
+        -Wl,--export=__data_end -Wl,--export=__heap_base \
+        -Wl,--strip-all,--no-entry \
+        -Wl,--unresolved-symbols=ignore-all \
+        -nostdlib \
 			</code></pre>
 			</section>
 		</section>			
@@ -329,23 +408,23 @@ cp /usr/local/include/wasmcv.h .
 		</section>
 
 		<section>
+			<h2>Run Blur processor (C)</h2>
+		</section>
+
+		<section>
 			<h2>Processors</h2>
 		</section>
 
 		<section>
-			<h2>Blurring images</h2>
+			<h2>Provide some basic building blocks</h2>
 		</section>
 
 		<section>
-			<h2>Detecting faces</h2>
+			<h2>Can be chained together</h2>
 		</section>
 
 		<section>
-			<h2>Detecting and blurring faces</h2>
-		</section>
-
-		<section>
-			<h2>'wasmvision' command</h2>
+			<h2>Can also create your own</h2>
 		</section>
 
 		<section>
@@ -426,7 +505,7 @@ cp /usr/local/include/wasmcv.h .
 		</section>
 		
 		<section>
-			<h2>version 0.1 available now!</h2>
+			<h2>version 0.2 available now!</h2>
 		</section>
 
 		<section>
