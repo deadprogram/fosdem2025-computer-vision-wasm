@@ -1,10 +1,7 @@
 .ONESHELL:
 
-build/showvideo:
-	go build -o ./build/showvideo ./demo/showvideo/main.go
-
-showvideo: builddir build/showvideo
-	./build/showvideo 2
+showvideo:
+	wasmvision run -p hello -logging=error --source 2
 
 clean:
 	rm -rf build
@@ -19,13 +16,19 @@ videodrone: builddir build/videodrone
 	./build/videodrone
 
 blur:
-	wasmvision run -p blur
+	wasmvision run -p blur -logging=error
+
+blurrs:
+	wasmvision run -p blurrs -logging=error
+
+blurc:
+	wasmvision run -p blurc -logging=error
 
 asciify:
-	wasmvision run -p asciify
+	wasmvision run -p asciify -logging=error
 
 mosaic:
-	wasmvision run -p mosaic
+	wasmvision run -p mosaic -logging=error
 
 ollama:
 	wasmvision run -p ollama -c model="qnguyen3/nanollava" -logging=error

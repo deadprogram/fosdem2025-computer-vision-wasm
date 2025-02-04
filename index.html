@@ -43,6 +43,8 @@
 				<h1>Computer Vision Using WebAssembly</h1>
 				<h2>FOSDEM 2025</h2>
 				<h2>Ron Evans - @deadprogram</h2>
+				<h3>fed: @deadprogram@social.tinygo.org</h3>
+				<h3>bsky: @deadprogram.com</h3>	
 			</section>
 		</section>
 
@@ -89,7 +91,7 @@
 		</section>
 
 		<section>
-			<h2>Industrial computer vision</h2>
+			<h2>Industrial computer vision systems</h2>
 		</section>
 
 		<section>
@@ -129,11 +131,11 @@
 		</section>
 
 		<section>
-			<h2>But lots of different parts to integrate</h2>
+			<h2>lots of different parts to integrate</h2>
 		</section>
 
 		<section>
-			<h2>hard to install on many different machines</h2>
+			<h2>hard to run on different kinds of machines</h2>
 		</section>
 
 		<section>
@@ -141,7 +143,7 @@
 		</section>
 
 		<section>
-			<h2>some need for limited customization</h2>
+			<h2>some need for customization</h2>
 		</section>
 
 		<section>
@@ -168,10 +170,7 @@
 		</section>
 
 		<section>
-			<div class="image-container">
-				<img src="images/wasmvision-arch.png">
-			</div>
-			<h2>wasmvision architecture</h2>
+			<h2>'wasmvision' command line interface</h2>
 		</section>
 
 		<section>
@@ -179,15 +178,11 @@
 		</section>
 
 		<section>
-			<h2>'wasmvision' command</h2>
+			<h2>wasmVision processors</h2>
 		</section>
 
 		<section>
-			<h2>Written in Go</h2>
-		</section>
-
-		<section>
-			<h2>(uses CGo)</h2>
+			<h2>engine Written in Go</h2>
 		</section>
 
 		<section>
@@ -230,6 +225,19 @@
 		</section>
 
 		<section>
+			<div class="image-container">
+				<img src="images/voltron___final_model_by_cosedimarco.jpg">
+			</div>  
+		</section>
+
+		<section>
+			<div class="image-container">
+				<img src="images/wasmvision-arch.png">
+			</div>
+			<h2>wasmvision architecture</h2>
+		</section>
+
+		<section>
 			<h2>wasmvision Processors</h2>
 		</section>
 
@@ -247,7 +255,7 @@
 
 		<section>
 			<h2>wasmCV</h2>
-			<h3>wasmcv.org</h3>
+			<h3><a target="_blank" href="https://wasmcv.org/">wasmcv.org</a></h3>
 		</section>
 
 		<section>
@@ -255,7 +263,7 @@
 		</section>
 
 		<section>
-			<h2>Using wit (wasm interface type)</h2>
+			<h2>defined Using wit (wasm interface type)</h2>
 		</section>
 
 		<section>
@@ -272,6 +280,11 @@
 
 		<section>
 			<h2>just using wit to generate client interface wrappers and documentation</h2>
+		</section>
+
+		<section>
+			<h2>wypes</h2>
+			<h3>github.com/orsinium-labs/wypes</h3>
 		</section>
 
 		<section>
@@ -338,7 +351,14 @@
 		</section>
 
 		<section>
-			<h2>Go client interface wrappers</h2>
+			<h2>wasmVision processors - go</h2>
+		</section>
+
+		<section>
+			<h3><code STYLE="text-transform:lowercase">package wasmcv</code></h3>
+		</section>
+
+		<section>
 			<h2>wit-bindgen-go</h2>
 			<h3>go.bytecodealliance.org</h3>
 		</section>
@@ -360,8 +380,18 @@ tinygo build -o blur.wasm -target=wasm-unknown ./blur
 			<h2>Run Blur processor (Go)</h2>
 		</section>
 
+		<section data-background-image="http://localhost:8080">
+		</section>
+
 		<section>
-			<h2>Rust/C client interface wrappers</h2>
+			<h2>wasmVision processors - rust</h2>
+		</section>
+
+		<section>
+			<h3><code STYLE="text-transform:lowercase">crate wasmcv</code></h3>
+		</section>
+
+		<section>
 			<h2>wit-bindgen</h2>
 			<h3>github.com/bytecodealliance/wit-bindgen</h3>
 		</section>
@@ -381,6 +411,22 @@ cargo build --target wasm32-unknown-unknown --release
 
 		<section>
 			<h2>Run Blur processor (Rust)</h2>
+		</section>
+
+		<section data-background-image="http://localhost:8080">
+		</section>
+
+		<section>
+			<h2>wasmVision processors - c</h2>
+		</section>
+
+		<section>
+			<h3><code STYLE="text-transform:lowercase">#include "wasmcv/imports.h"</code></h3>
+		</section>
+
+		<section>
+			<h2>wit-bindgen</h2>
+			<h3>github.com/bytecodealliance/wit-bindgen</h3>
 		</section>
 
 		<section>
@@ -411,12 +457,15 @@ cargo build --target wasm32-unknown-unknown --release
 			<h2>Run Blur processor (C)</h2>
 		</section>
 
+		<section data-background-image="http://localhost:8080">
+		</section>
+
 		<section>
 			<h2>Processors</h2>
 		</section>
 
 		<section>
-			<h2>Provide some basic building blocks</h2>
+			<h2>Provide basic building blocks</h2>
 		</section>
 
 		<section>
@@ -424,11 +473,11 @@ cargo build --target wasm32-unknown-unknown --release
 		</section>
 
 		<section>
-			<h2>Can also create your own</h2>
+			<h2>Can also create your own processors</h2>
 		</section>
 
 		<section>
-			<h2>A quick tour of a few processors</h2>
+			<h2>A quick tour of a few included processors</h2>
 		</section>
 
 		<section>
@@ -437,8 +486,22 @@ cargo build --target wasm32-unknown-unknown --release
 		</section>
 
 		<section>
+			<h2>Run asciify processor</h2>
+		</section>
+
+		<section data-background-image="http://localhost:8080">
+		</section>
+
+		<section>
 			<h2>mosaic processor (Go)</h2>
 			<h3><a target="_blank" href="https://github.com/wasmvision/wasmvision/blob/main/processors/mosaic/mosaic.go">See the code</a></h3>
+		</section>
+
+		<section>
+			<h2>Run mosaic processor</h2>
+		</section>
+
+		<section data-background-image="http://localhost:8080">
 		</section>
 
 		<section>
@@ -451,6 +514,11 @@ cargo build --target wasm32-unknown-unknown --release
 		<section>
 			<h2>ollama processor (Go)</h2>
 			<h3><a target="_blank" href="https://github.com/wasmvision/wasmvision/blob/main/processors/ollama/ollama.go">See the code</a></h3>
+		</section>
+
+		<section>
+			<h2>Run ollama processor</h2>
+			<h3><a target="_top" href="http://localhost:8080">See video</a></h3>
 		</section>
 
 		<section>
@@ -468,6 +536,13 @@ cargo build --target wasm32-unknown-unknown --release
 
 		<section>
 			<h2>Dualshock 4 joystick</h2>
+		</section>
+
+		<section>
+			<h2>Look at the hardware</h2>
+		</section>
+
+		<section data-background-image="http://localhost:8080">
 		</section>
 
 		<section>
@@ -503,7 +578,14 @@ cargo build --target wasm32-unknown-unknown --release
 		<section>
 			<h2>videodrone flight</h2>
 		</section>
-		
+
+		<section data-background-image="http://localhost:8080">
+		</section>
+
+		<section>
+			<h2>was that fun?</h2>
+		</section>
+
 		<section>
 			<h2>version 0.2 available now!</h2>
 		</section>
@@ -518,6 +600,8 @@ cargo build --target wasm32-unknown-unknown --release
 			<h1>Thank you!</h1>
 			<h2>@deadprogram</h2>
 			<h2>Technologist For Hire</h2>
+			<h3>fed: @deadprogram@social.tinygo.org</h3>
+			<h3>bsky: @deadprogram.com</h3>
 		</section>	
 	  </div>
 	</div>
